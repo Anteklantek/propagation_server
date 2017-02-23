@@ -16,7 +16,7 @@
 #include <sys/wait.h>
 #include <pthread.h>
 
-#define QUEUE_SIZE 5
+#define QUEUE_SIZE 2
 
 //shared variables
 int end = 0;
@@ -28,7 +28,6 @@ int c_deskryptor_gniazda;
 
 //server_variables
 int s_deskryptor_gniazda;
-
 	
 
 char * getline_new(void) {
@@ -62,8 +61,6 @@ char * getline_new(void) {
     *line = '\0';
     return linep;
 }
-
-
 
 
 void* input_loop(void *arg) {
@@ -107,9 +104,6 @@ void* client_loop(void *arg) {
 }
 
 
-
-
-
 int main(){
 
 	char * serwer_matka;
@@ -118,8 +112,6 @@ int main(){
 	struct sockaddr_in c_server;
 	char *c_server_ip;
 	short c_service_port;
-	
-
 
 	//serv vars
 	struct sockaddr_in s_server, s_klient;
@@ -166,8 +158,6 @@ int main(){
 	printf("Podaj port dla swojego serwera:\n");
 	s_input_port = getline_new();	
 	s_port = atoi(s_input_port);
-
-
 
 	memset(&s_server, 0, sizeof(struct sockaddr));
 	s_server.sin_family = AF_INET;
