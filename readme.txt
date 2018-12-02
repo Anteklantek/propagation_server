@@ -2,7 +2,7 @@
 Program wykonujący komendę na X komputerach równolegle, topologia płaska oraz drzewiasta.
 
 2. Protokół komunikacji
-Brak skomplikowanego protokołu, komenda jest wysyłana, odbierana i konsumowana natychmiastowo.
+Komenda jest wysyłana, odbierana i konsumowana natychmiastowo.
 
 3. Ogólnie przyjęty model komunikacji
 Każdy proces (oprócz matki) jest jednocześnie klientem i serwerem.
